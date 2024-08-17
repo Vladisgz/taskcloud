@@ -2,32 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components {
+  .nav-link {
+    @apply relative font-semibold text-white cursor-pointer text-[18px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#C2F23C] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center hidden;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .nav-link-mobile {
+    @apply relative mb-8 font-semibold text-white cursor-pointer text-[26px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#C2F23C] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.perspective-1000 {
+  perspective: 1000px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.transition-transform {
+  transition: transform 0.5s;
 }
