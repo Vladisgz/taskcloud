@@ -17,7 +17,7 @@ const BingoCard = ({ image, title, description }: Props) => {
   return (
     <div
       onClick={handleClick}
-      className={`w-[445px] h-[240px] text-black border-box rounded-2xl cursor-pointer flex flex-col items-center justify-center bg-cover bg-center transition-all duration-700 ${
+      className={`lg:w-[445px] lg:h-[240px] w-[343px] h-[200px] text-black border-box rounded-2xl cursor-pointer flex flex-col items-center justify-center bg-cover bg-center transition-all duration-700 ${
         isFlipped ? `${style.rotateY}` : ""
       }`}
       style={{

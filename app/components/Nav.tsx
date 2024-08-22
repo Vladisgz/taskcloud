@@ -15,10 +15,10 @@ const Nav = ({ openNav }: Props) => {
   };
 
   return (
-    <div className="sticky top-0 z-10 w-full">
+    <div className="sticky top-0 z-10 w-full bg-inherit">
       <div className="w-[95%] h-[12vh] flex items-center justify-between mx-auto text-white">
         <Image src={logo} alt="Nav Logo" />
-        <div className="hidden md:flex space-x-16">
+        <div className="hidden lg:flex space-x-16">
           {["#whatwaiting", "#info", "#bingo", "#faqs"].map((link, i) => (
             <NavItems
               key={i}
@@ -31,7 +31,7 @@ const Nav = ({ openNav }: Props) => {
         </div>
         <div
           onClick={openNav}
-          className="w-8 md:hidden h-8 cursor-pointer text-[#C2F23C]"
+          className={`w-8 lg:hidden h-8 cursor-pointer text-[#C2F23C]`}
         >
           <Bars3Icon />
         </div>
