@@ -34,10 +34,15 @@ const MobileNav = ({ nav, closeNav }: Props) => {
 
   return (
     <>
-      {nav && <div className="fixed inset-0 bg-black bg-opacity-50 z-[9999]" onClick={closeNav} />}
+      {nav && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-[9999]"
+          onClick={closeNav}
+        />
+      )}
       <div
         ref={navRef}
-        className={`fixed right-0 top-0 w-[80vw] h-[100vh] transform transition-transform duration-300 z-[10000] bg-[#09101a] ${
+        className={`fixed right-0 top-0 w-[80vw] h-[100vh] transform transition-transform duration-300 z-[10000] bg-[#282828] ${
           nav ? "translate-x-0" : "translate-x-full"
         } flex flex-col items-center justify-center`}
       >

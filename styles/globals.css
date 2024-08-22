@@ -11,15 +11,3 @@
     @apply relative mb-8 font-semibold text-white cursor-pointer text-[26px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#C2F23C] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
   }
 }
-
-.perspective-1000 {
-  perspective: 1000px;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-.transition-transform {
-  transition: transform 0.5s;
-}
