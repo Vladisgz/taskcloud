@@ -12,7 +12,7 @@ const FaqsItems = ({ title, desc }: Props) => {
         <div className="py-5">
           <details className="group">
             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-              <span className="text-2xl">{title}</span>
+              <span className="text-xl lg:text-2xl">{title}</span>
               <span className="transition group-open:rotate-180">
                 <svg
                   color="#C2F23C"
@@ -30,7 +30,7 @@ const FaqsItems = ({ title, desc }: Props) => {
                 </svg>
               </span>
             </summary>
-            <p className="text-white mt-3 group-open:animate-fadeIn text-xl">
+            <p className="text-white mt-3 group-open:animate-fadeIn text-lg lg:text-xl">
               {desc}
             </p>
           </details>

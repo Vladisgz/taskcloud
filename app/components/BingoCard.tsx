@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "../style/Bingo.module.css";
+import style from "../style/BingoFlip.module.css";
 
 interface Props {
   image: string;
@@ -35,7 +35,7 @@ const BingoCard = ({ image, title, description }: Props) => {
           {description}
         </p>
       ) : (
-        <h1 className="text-2xl font-medium text-center">{title}</h1>
+        <h1 className="text-[22px] lg:text-3xl font-medium text-center">{title}</h1>
       )}
     </div>
   );

@@ -1,15 +1,16 @@
 import React from "react";
 import BingoCard from "./BingoCard";
 import { bingoData } from "../data/bingoData";
+import styles from "../style/Bingo.module.css";
 
 const Bingo = () => {
   return (
-    <section id="bingo" className="w-full h-full mt-36 flex justify-center">
-      <div className="w-[95%] flex flex-col items-center justify-center">
-        <h1 className="text-5xl max-w-[480px] text-center">
+    <section id="bingo" className={styles.sectionContainer}>
+      <div className={styles.contentContainer}>
+        <h1 className={styles.title}>
           Открой все карточки и собери свое бинго
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  mt-10">
+        <div className={styles.gridContainer}>
           {bingoData.map((x, i) => (
             <BingoCard
               key={i}

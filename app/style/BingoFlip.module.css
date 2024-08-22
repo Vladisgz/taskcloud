@@ -1,0 +1,25 @@
+/* BingoFlip.module.css */
+.perspective {
+  perspective: 1000px;
+}
+
+.rotateY {
+  transform: rotateY(180deg);
+}
+
+.transition {
+  transition: transform 0.5s;
+}
+
+/* Для гарантии, что обе стороны карточки занимают одинаковое пространство */
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: white;
+}
