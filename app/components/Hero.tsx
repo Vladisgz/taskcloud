@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="w-[100%] mx-9">
       <div className="flex md:flex-row sm:flex-col-reverse sm:items-start items-center justify-between">
-        <div className="md:w-[45%] sm:w-[100%]">
+        <div className="md:w-[45%] sm:w-[90%]">
           <h1 className="md:text-6xl sm:text-[32px] mb-8 font-medium">
             Плотинка лесная отборная со вкусом подземного ручейка
           </h1>
@@ -22,7 +22,7 @@ const Hero = () => {
             чьих землях он и строился.
           </p>
         </div>
-        <div className="lg:w-[45%] sm:w-[100%] mb-8 flex justify-center">
+        <div className="lg:w-[45%] sm:w-[90%] mb-8 flex justify-center">
           <Image src={hero} alt="Героическое изображение" className="h-auto" />
         </div>
       </div>

@@ -1,25 +1,61 @@
-/* BingoFlip.module.css */
-.perspective {
-  perspective: 1000px;
-}
-
-.rotateY {
-  transform: rotateY(180deg);
-}
-
-.transition {
-  transition: transform 0.5s;
-}
-
-/* Для гарантии, что обе стороны карточки занимают одинаковое пространство */
-.card {
-  position: absolute;
+.sectionContainer {
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  margin-top: 144px;
+  display: flex;
+  justify-content: center;
 }
 
-.back {
-  transform: rotateY(180deg);
-  background-color: white;
+@media (max-width: 769px) {
+  .sectionContainer {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .sectionContainer {
+    margin-top: 100px;
+  }
+}
+
+.contentContainer {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 28px;
+  text-align: center;
+  max-width: 480px;
+  margin-bottom: 20px;
+}
+
+/* large screens */
+@media (min-width: 1440px) {
+  .title {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+}
+
+.gridContainer {
+  display: grid;
+  gap: 20px; /* Default gap */
+  margin-top: 20px; /* m for sm */
+}
+
+@media (min-width: 769px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr); /* 3 col for lg */
+    margin-top: 40px; /* m for lg */
+  }
 }

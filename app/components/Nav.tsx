@@ -15,8 +15,8 @@ const Nav = ({ openNav }: Props) => {
   };
 
   return (
-    <div className="sticky top-0 z-10 w-full bg-inherit">
-      <div className="w-[95%] h-[12vh] flex items-center justify-between mx-auto text-white">
+    <div className="sticky top-0 z-10 w-full bg-inherit shadow-md">
+      <div className="w-[95%] h-[68px] flex items-center justify-between mx-auto text-white">
         <Image src={logo} alt="Nav Logo" />
         <div className="hidden lg:flex space-x-16">
           {["#whatwaiting", "#info", "#bingo", "#faqs"].map((link, i) => (
