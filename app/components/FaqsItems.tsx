@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import faqs from "../../public/faqs_arrow.svg";
+import Image from "next/image";
 
 interface Props {
   title: string;
@@ -6,38 +8,45 @@ interface Props {
 }
 
 const FaqsItems = ({ title, desc }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="w-full relative">
       <div className="w-full grid divide-y divide-neutral-200">
         <div className="py-5">
-          <details className="group">
-            <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-              <span className="text-xl lg:text-2xl">{title}</span>
-              <span className="transition group-open:rotate-180">
-                <svg
-                  color="#C2F23C"
-                  fill="none"
-                  height="24"
-                  shape-rendering="geometricPrecision"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                  width="24"
-                >
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <p className="text-white mt-3 group-open:animate-fadeIn text-lg lg:text-xl">
+          <button
+            onClick={toggleOpen}
+            className="flex justify-between items-center font-medium cursor-pointer w-full text-left"
+          >
+            <span className="text-xl lg:text-2xl">{title}</span>
+            <span
+              className={`transition transform ${
+                isOpen ? "rotate-0" : "rotate-180"
+              } duration-300`}
+            >
+              <Image src={faqs} alt="" />
+            </span>
+          </button>
+          <div
+            className={`overflow-hidden transition-all duration-300 ${
+              isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <p className="text-white mt-[14px] lg:mt-[26px] text-lg lg:text-xl">
               {desc}
             </p>
-          </details>
+          </div>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 w-full">
-        <div className="h-px bg-[#A6ABB3] mx-auto" style={{ marginTop: "20px" }}></div>
+        <div
+          className="h-px bg-[#A6ABB3] mx-auto"
+          style={{ marginTop: "20px" }}
+        ></div>
       </div>
     </div>
   );
