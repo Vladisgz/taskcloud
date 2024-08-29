@@ -14,7 +14,7 @@ const HomePage = () => {
   const closeNav = () => setNav(false);
 
   return (
-    <div className="bg-[#282828] text-white pb-5">
+    <div className=" bg-[#282828] text-white pb-5">
       <MobileNav nav={nav} closeNav={closeNav} />
       <Nav openNav={openNav} />
       <Hero />

@@ -31,7 +31,7 @@ const Nav = ({ openNav }: Props) => {
         </div>
         <div
           onClick={openNav}
-          className={`w-8 lg:hidden h-8 cursor-pointer text-[#C2F23C]`}
+          className={`w-8 lg:hidden h-8 cursor-pointer text-[#A6ABB3]`}
         >
           <Bars3Icon />
         </div>

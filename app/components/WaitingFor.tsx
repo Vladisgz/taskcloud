@@ -7,7 +7,7 @@ const WaitingFor = () => {
   return (
     <section id="whatwaiting" className={styles.sectionContainer}>
       <div className={styles.contentContainer}>
-        <h1 className={styles.title}>Что ждёт меня на пути?</h1>
+        <h2 className={styles.title}>Что ждёт меня на пути?</h2>
         <Image src={waitingFor} alt="" />
         <p className={styles.description}>
           Межгалактические порты и бесконечные просторы вселенной

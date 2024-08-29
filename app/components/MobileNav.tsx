@@ -44,7 +44,7 @@ const MobileNav = ({ nav, closeNav }: Props) => {
         ref={navRef}
         className={`fixed right-0 top-0 w-[80vw] h-[100vh] transform transition-transform duration-300 z-[10000] bg-[#282828] ${
           nav ? "translate-x-0" : "translate-x-full"
-        } flex flex-col items-center justify-center`}
+        } flex flex-col gap-y-4 pt-[70px] pl-[30px]`}
       >
         {["#whatwaiting", "#info", "#bingo", "#faqs"].map((link, index) => (
           <NavItems
@@ -55,10 +55,6 @@ const MobileNav = ({ nav, closeNav }: Props) => {
             onClick={(e) => handleSmoothScroll(e, link)}
           />
         ))}
-        <XMarkIcon
-          onClick={closeNav}
-          className="w-8 h-8 absolute cursor-pointer top-8 right-8 text-[#C2F23C]"
-        />
       </div>
     </>
   );
